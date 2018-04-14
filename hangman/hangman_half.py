@@ -39,10 +39,6 @@ def chooseWord(wordlist):
 # end of helper code
 # -----------------------------------
 
-# Load the list of words into the variable wordlist
-# so that it can be accessed from anywhere in the program
-wordlist = loadWords()
-
 def isWordGuessed(secretWord, lettersGuessed):
     '''
     secretWord: string, the word the user is guessing
@@ -182,5 +178,11 @@ def hangman(secretWord):
 # and run this file to test! (hint: you might want to pick your own
 # secretWord while you're testing)
 
+# Load the list of words into the variable wordlist
+wordlist = loadWords()
+
+# Choose a secret word
 secretWord = chooseWord(wordlist).lower()
+
+# Call hangman() to guess this word
 hangman(secretWord)
