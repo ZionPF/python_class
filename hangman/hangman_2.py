@@ -102,15 +102,21 @@ def giveHint(secretWord,lettersGuessed):
     tobe_guessed = []
     tobe_wrong = []
     alphabet = "abcdefghijklmnopqrstuvwxyz"
-    for i in alphabet:
-        if i not in lettersGuessed:
-            tobe_guessed.append(i)
-    for i in tobe_guessed:
-        if i not in secretWord:
-            tobe_wrong.append(i)
-    h = random.choice(tobe_wrong)
-    return h
-        
+#    for i in alphabet:
+#        if i not in lettersGuessed:
+#            tobe_guessed.append(i)
+#    for i in tobe_guessed:
+#        if i not in secretWord:
+#            tobe_wrong.append(i)
+#    h = random.choice(tobe_wrong)
+#    return h
+
+## Another way:
+    while True:
+        random_letter = random.choice(list(alphabet))
+        print('Hint letter:',random_letter)
+        if random_letter not in secretWord and random_letter not in lettersGuessed:
+            return random_letter
 
 
 
