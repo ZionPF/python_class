@@ -1,0 +1,4 @@
+hulk,100,0,hulk-small.gif
+captain,60,80,captain-small.gif
+ironman,80,85,ironman-small.gif
+thor,90,60,thor.gif

@@ -1,4 +1,7 @@
-hulk,100,0,hulk.gif
-captain,60,80,captain.gif
-ironman,80,85,ironman.gif
-thor,90,60,thor.gif
+hulk,100,0,80,hulk.gif
+captain,60,80,30,captain.gif
+ironman,80,85,85,ironman.gif
+thor,90,60,90,thor.gif
+eagle,60,80,20,eagle.gif
+mario,70,60,60,mario.gif
+strange,80,100,30,dr_strange.gif

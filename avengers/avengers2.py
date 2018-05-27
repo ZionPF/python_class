@@ -11,8 +11,8 @@ style2 = ('Arial', 20, 'bold')
 cards = dict()
 fhand = open('cards.txt')
 for line in fhand:
-    name, power, intelligence, image = line.strip().split(',')
-    cards[name] = [power, intelligence, image]
+    name, power, intelligence, speed, image = line.strip().split(',')
+    cards[name] = [power, intelligence, speed, image]
     screen.register_shape(image)
 fhand.close()
 
@@ -23,7 +23,7 @@ def choose_card(card, cards, pen, xcor, ycor):
     if card in cards:
         stats = cards[card]
         pen.goto(xcor,ycor)
-        pen.shape(stats[2])
+        pen.shape(stats[-1])
         pen.stamp()
         pen.setheading(-90)
         pen.forward(120)
@@ -32,7 +32,10 @@ def choose_card(card, cards, pen, xcor, ycor):
         pen.write("Power: " + stats[0], font = style1, align = 'center' )
         pen.forward(25)
         pen.write("Intelligence: " + stats[1], font = style1, align = 'center' )
-        score = int(stats[0]) + int(stats[1])
+        pen.forward(25)
+        pen.write("Speed: " + stats[2], font = style1, align = 'center' )
+        score = int(stats[0]) + int(stats[1]) + int(stats[2])
+
     return score
 
 
