@@ -22,7 +22,7 @@ while True:
     xpos = xpos - fish.get_width()/2
     ypos = ypos - fish.get_height()/2
 
-    screen.blit(plate, (0,0))
+    #screen.blit(plate, (0,0))
     screen.blit(fish,(xpos,ypos))
 
     pygame.display.update()
